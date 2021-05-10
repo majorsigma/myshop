@@ -23,6 +23,7 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
+    braintree_id = models.CharField(max_length=150, blank=True)
     order = models.ForeignKey(
         Order,
         related_name='items',

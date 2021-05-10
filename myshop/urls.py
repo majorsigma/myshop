@@ -22,7 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')), 
     path('', include('shop.urls', namespace = 'my_shop')),
-    path('orders/', include('orders.urls', namespace='orders'))
+    path('orders/', include('orders.urls', namespace = 'orders')),
+    path('payment/', include('payment.urls'), name = 'payment'),
+    path('', include('shop.urls', namespace='shop')),
     
 ]
 
