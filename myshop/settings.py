@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
+    'coupons.apps.CouponsConfig',
 ]
 
 MIDDLEWARE = [
@@ -149,3 +150,5 @@ Configuration.configure(
     BRIANTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
